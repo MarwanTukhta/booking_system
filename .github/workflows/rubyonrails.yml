@@ -24,6 +24,7 @@ jobs:
       - name: Set up test DB
         run: |
           chmod u+x bin/rails
+          bin/rails db:migrate
           bin/rails db:test:prepare
       # Add or replace test runners here
       - name: Run tests
